@@ -1,0 +1,47 @@
+\documentclass[11pt, english]{article}
+%---------------------------
+% Packages 
+%---------------------------
+\usepackage{amsmath} % Mathematical utilities
+\usepackage{ragged2e} % Centering images
+\usepackage{graphicx} % Pictures and stuff
+% \usepackage[margin=1.5in]{geometry} % Uncomment for custom margins 
+\usepackage{float}
+\usepackage[
+    backend=biber,
+    style=authoryear,
+    citestyle=authoryear,
+    style=ieee
+]{biblatex} % Bibliography
+\usepackage{setspace} % For singlespacing, doublespacing, etc.
+\usepackage{lipsum} % Placeholder lorem ipsum text
+\usepackage[useregional]{datetime2} % Working with dates with \date
+
+\renewcommand*\contentsname{Table of Contents}
+\setlength\bibitemsep{1.5\itemsep}
+\setlength{\parindent}{0em}
+
+\graphicspath{{assets/}}
+
+%---------------------------
+% Custom Commands 
+%---------------------------
+\newcommand{\ImportContent}[1]{\input{content/#1}}
+
+%---------------------------
+% FLAGS 
+%---------------------------
+\newif\ifLetterSubmittal
+\newif\ifTitlePage
+
+% Edit these flags for true/false
+\LetterSubmittalfalse
+\TitlePagetrue
+
+%---------------------------
+% Document Setup 
+%---------------------------
+\newcommand\ReportTitle{<Report Title>}
+\newcommand\Name{Daniel Qu}
+\newcommand\ReportDate{\DTMdisplaydate{2022}{01}{31}{-1}}
+\newcommand\PreparedFor{<Course/University of Waterloo>}
